@@ -24,3 +24,4 @@ class BasePage(object):
         except (NoSuchElementException):
             return False
         return True
+# добавить в метод выше из файла локаторс вместо how what
