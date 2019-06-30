@@ -9,9 +9,10 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        if "login" in str(*MainPageLocators.LOGIN_LINK1):
-            assert self.is_element_present (*MainPageLocators.LOGIN_LINK), "Login link is not presented"
-        else False
+        assert "login" in str(*MainPageLocators.LOGIN_LINK)
+        # if "login" in str(*MainPageLocators.LOGIN_LINK):
+        #     assert self.is_element_present (*MainPageLocators.LOGIN_LINK), "Login link is not presented"
+        # else False
         # реализуйте проверку на корректный url адрес
         
     def should_be_login_form(self):

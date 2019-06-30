@@ -10,4 +10,9 @@ class LoginPageLocators(object):
 
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
 
-
+class ProductPageLocators(object):
+    CART_LINK = (By.CSS_SELECTOR, ".btn-add-to-basket")
+    CART_PRODUCT_NAME = (By.CSS_SELECTOR, "#messages div:nth-child(1) div strong")
+    PAGE_PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
+    PAGE_PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
+    CART_PRODUCT_PRICE = (By.CSS_SELECTOR, ".alert-info div p:nth-child(1) strong")
