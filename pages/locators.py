@@ -16,3 +16,7 @@ class ProductPageLocators(object):
     PAGE_PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
     PAGE_PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     CART_PRODUCT_PRICE = (By.CSS_SELECTOR, ".alert-info div p:nth-child(1) strong")
+
+class BasePageLocators(object):
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
