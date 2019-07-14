@@ -1,25 +1,22 @@
-# Создать класс для страницы товара. Описать метод для добавления в корзину 
-# Дописать методы-проверки
-
-
 from .base_page import BasePage
 from .locators import ProductPageLocators
+from .locators import MainPageLocators
 
 class ProductPage(BasePage):
     def add_product_to_cart(self):
-        cart_link = self.browser.find_element(*ProductPageLocators.CART_LINK)
+        cart_link = self.browser.find_element(*ProductPageLocators.ADD_TO_CART_LINK)
         cart_link.click()
 
     def should_be_product_page(self):
         self.should_be_product_url()
         self.should_be_add_to_cart_button()   # проверяем что есть кнопка добавления в корзину
-		self.should_not_be_success_message()
+        self.should_not_be_success_message()
         
     def should_be_product_url(self):
         assert '?promo=' in self.browser.current_url, "Not product url" #newYear
 
     def should_be_add_to_cart_button(self):
-        assert self.is_element_present(*ProductPageLocators.CART_LINK), "No cart button"
+        assert self.is_element_present(*MainPageLocators.CART_LINK), "No cart button"
   
     def should_be_success_message(self):
         assert self.is_element_present(*ProductPageLocators.CART_PRODUCT_NAME), "No success message"
