@@ -4,14 +4,6 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
-
-
-
-# Первым делом добавим конструктор — метод, который вызывается, когда мы создаем объект. 
-# Конструктор объявляется ключевым словом __init__. В него в качестве параметров мы передаем 
-# экземпляр драйвера и url адрес. 
-# Внутри конструктора сохраняем эти данные как аттрибуты нашего класса. 
-
 from selenium.common.exceptions import NoSuchElementException   #(имя исключения)
 
 class BasePage(object):
