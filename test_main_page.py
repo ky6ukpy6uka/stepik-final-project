@@ -23,32 +23,6 @@ class TestLoginFromMainPage(object):
         page.open()
         page.should_be_login_link()
 
-# def test_guest_can_go_to_login_page(browser):
-#     #link = "http://selenium1py.pythonanywhere.com/"
-#     link = "http://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/?promo=midsummer"
-#     page = MainPage(browser, link) # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url
-#     page.open() # открываем страницу
-#     page.go_to_login_page() # выполняем метод страницы - переходим на страницу логина
-#     # browser.get(link)
-#     # login_link = browser.find_element_by_css_selector("#login_link")
-#     # login_link.click()
-
-# def test_guest_can_go_to_login_link(browser):
-#     link = "http://selenium1py.pythonanywhere.com"
-#     page = MainPage(browser, link)
-#     page.open()
-#     login_page = page.go_to_login_page()
-#     login_page.should_be_login_page()
-
-
-# def test_guest_cant_see_product_in_cart_opened_from_main_page(browser):
-#     link = "http://selenium1py.pythonanywhere.com"
-#     page = MainPage(browser, link)
-#     page.open()
-#     page.go_to_cart()
-#     page.should_not_be_items_in_cart()
-    
-
 def test_guest_cant_see_product_in_cart_opened_from_main_page(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209"
     page = MainPage(browser, link)
@@ -57,3 +31,4 @@ def test_guest_cant_see_product_in_cart_opened_from_main_page(browser):
     cart_page = CartPage(browser, browser.current_url)
     cart_page.should_not_be_items_in_cart()
     cart_page.should_be_empty_cart_text()
+

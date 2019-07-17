@@ -11,7 +11,6 @@ def pytest_addoption(parser):
                      help="Set requests language")
 
 
-
 #function open the browserx
 @pytest.fixture(scope="function")
 def browser(request):
